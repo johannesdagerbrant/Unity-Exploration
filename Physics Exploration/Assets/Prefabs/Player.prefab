@@ -1,0 +1,220 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3371388359217953505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3371388359217953567}
+  - component: {fileID: 3371388359217953566}
+  - component: {fileID: 3371388359217953564}
+  m_Layer: 2
+  m_Name: Player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3371388359217953567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3371388359217953505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3371388359217953566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3371388359217953505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f0f21a3a428a4f428b41d9eb4be8417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anatomy:
+    numLimbs: 8
+    limbLength: 300
+    limbSegments: 3
+    headPosition: {x: 0, y: 0.26, z: 0.5}
+    headScale: {x: 50, y: 40, z: 30}
+    bodyScale: {x: 60, y: 40, z: 80}
+  origins:
+    spacing: 100
+    height: 4.7
+    depth: 1.1
+  pose:
+    stance: 0.4
+    bend: 90
+    followMultiplier: 10
+  stride:
+    duration: 0.65
+    durationVelocityMultiplier: 0.6
+    durationAngularVelocityMultiplier: 0.5
+    targetGoalVelocityMultiplier: 9
+    settleTime: 0.3
+    length: 50
+    lift: 20
+    liftCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0.56020695
+        outSlope: 0.56020695
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.5501858
+      - serializedVersion: 3
+        time: 0.6040892
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -6.1358576
+        outSlope: -6.1358576
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.03717494
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    pull: 50
+    pullCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 3.9589424
+        outSlope: 3.9589424
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.057620812
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.16398717
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -5.8320317
+        outSlope: -5.8320317
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.033457518
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  movement:
+    widerStanceWhenAcceleration: 1
+    widerStanceWhenDeceleration: 1
+    braceWhenAcceleration: 40
+    braceWhenDeceleration: 30
+    pitchWhenAcceleration: 60
+    pitchWhenDeceleration: 50
+    rollWhenAcceleration: 70
+    rollWhenDeceleration: 70
+    jumpTime: 0.1
+    landingTime: 0
+  bodyPosSOD:
+    f: 1.5
+    z: 0.5
+    r: -2
+    draw: 0
+    reComputeConstants: 0
+    stabilizeTime: 1
+  bodyUpSOD:
+    f: 1
+    z: 1
+    r: 0
+    draw: 0
+    reComputeConstants: 0
+    stabilizeTime: 1
+  bodyBraceSOD:
+    f: 1.5
+    z: 0.75
+    r: 0
+    draw: 0
+    computeEveryFrame: 0
+    stabilizeTime: 1
+  braceStanceSOD:
+    f: 2
+    z: 0.5
+    r: 0
+    draw: 0
+    computeEveryFrame: 0
+    stabilizeTime: 1
+  bodyYawSOD:
+    f: 1.25
+    z: 0.75
+    r: -1
+    draw: 0
+    reComputeConstants: 0
+    stabilizeTime: 1
+  bodyPitchSOD:
+    f: 2
+    z: 1
+    r: 0
+    draw: 0
+    computeEveryFrame: 1
+    stabilizeTime: 1
+  bodyRollSOD:
+    f: 2
+    z: 1
+    r: 0
+    draw: 0
+    computeEveryFrame: 0
+    stabilizeTime: 1
+--- !u!114 &3371388359217953564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3371388359217953505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b20a2d7506538e4f9b6f62f690de64b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1000
+  fallingMoveSpeed: 5
+  fallingMaxSpeed: 81452850
+  jumpForce: 15
+  lookHorizontalSpeed: 350
+  lookVerticalSpeed: 250
+  lookUpCap: 75
+  lookDownCap: -75
+  raycastArea: 200
+  raycastLength: 50
+  raycastAmount: 4
+  drawRaycasts: 0
